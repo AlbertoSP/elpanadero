@@ -5,14 +5,17 @@ import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { SessionService } from './services/session.service';
-import { UserprofileComponent } from './userprofile/userprofile.component';
+import { ProductListComponent } from './product-list/product-list.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
-    UserprofileComponent
+    
+    ProductListComponent,
+    
   ],
   imports: [
     BrowserModule,
