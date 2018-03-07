@@ -1,0 +1,17 @@
+<div>
+  <form>
+    <h2> Añadir pedido</h2>
+    <label> name </label>
+    <input type="text" [(ngModel)]="name" name="name"/>
+    <br>
+    <label> price </label>
+    <input type="text" [(ngModel)]="price" name="price"/>
+    <label> latitud </label>
+    <input type="text" [(ngModel)]="latitud" name="latitud"/>
+    <label> longitud </label>
+    <input type="text" [(ngModel)]="longitud" name="longitud"/>
+    <div>
+      <button (click)="submitForm()">añadir nuevo producto</button>
+    </div>
+  </form>
+  </div>
