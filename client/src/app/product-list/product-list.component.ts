@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductListService } from '../services/product-list.service';
+import { ProductListService } from '../services/productList.service';
+import {ActivatedRoute, Router} from "@angular/router"
+
+import {SessionService} from "../services/session.service"
+
 
 @Component({
   selector: 'app-product-list',
@@ -11,17 +15,21 @@ export class ProductListComponent {
   name: string;
   price: number;
   error:string;
-  product:any;
-  constructor(public productList:ProductListService) { }
-
+  products:any;
+  router;
+  constructor(public productList:ProductListService) {
+    this.getProducts()
+   }
+  // goToHome() {
+  //   this.router.navigate(['/']);  // <!-- Programmatically navigate to home
   
  
-  getProduct(){
-    this.productList.getProduct(this.name,this.price)
+  getProducts(){
+    this.productList.getProductInfo()
     .catch(e => this.error = e)
-    .subscribe(product=> {
+    .subscribe(products => {
       console.log("YA HE LLEGADO DE LA BBDD")
-      this.product = product
+      this.products = products
     });
   }
 }
