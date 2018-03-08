@@ -8,10 +8,9 @@ import { PedidoService } from '../services/pedidos.service';
 })
 export class MapaComponent {
   title: string = 'repaaartee panadeeeroo';
-  lat: number = 51.678418;
-  lng: number = 7.809007;
-  lat2: number = 41.678418;
-  lng2: number = 17.809007;
+  name: string
+  latitud: number = 51.678418;
+  longitud: number = 7.809007;
   pedidos: any;
   constructor(public pedido: PedidoService) { 
     
@@ -20,6 +19,7 @@ export class MapaComponent {
   ngOnInit() {
     this.pedido.cogerPedidos().subscribe( pedidos => {
       this.pedidos = pedidos;
+      console.log(this.pedidos)
     });
   }
   

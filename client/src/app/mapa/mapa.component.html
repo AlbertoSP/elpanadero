@@ -9,7 +9,7 @@
 
 
 <agm-map [latitude]="lat" [longitude]="lng">
-  <div *ngFor="let punto of this.pedidos">
-    <agm-marker [latitude]="punto.lat" [longitude]="punto.lng"></agm-marker>
+  <div *ngFor="let punto of pedidos">
+    <agm-marker [latitude]="punto.latitud" [longitude]="punto.longitud"></agm-marker>
   </div>
 </agm-map>

@@ -1,8 +1,21 @@
 <nav>
   <ul>
-    <li> <a href="/singup"> singup or login </a> </li>
+    <li> <a href="/signup"> signup or login </a> </li>
     <li> <a href="/list"> list </a> </li>
     <li> <a href="/newproduct"> list </a> </li>
     <li> <a href="/"> list </a> </li>
+    <li> <a [routerLink]="['singup']"> Home </a> </li>
+    <li> <a [routerLink]="['list']"> About </a> </li>
   </ul>
 </nav>
+<!-- <router-outlet></router-outlet> -->
+<nav>
+  <ul>
+    <li> <a [routerLink]="['/signup']"> signup or login </a> </li>
+    <li> <a [routerLink]="['/list']"> Lista de productos </a> </li>
+    <li> <a [routerLink]="['/newproduct']"> nuevoProducto </a> </li>
+    <li> <a [routerLink]="['/']"> home </a> </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
