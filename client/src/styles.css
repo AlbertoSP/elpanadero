@@ -2,3 +2,17 @@
 agm-map {
     height: 300px;
   }
+  .navbar{
+    background-color: #FDD692;
+  }
+  .imputnewproduct{
+    padding-left: 7%;
+    padding-right: 7%;
+   
+  }
+  .colorBottonañadirproduct{
+    background-color: #FBFFB9;
+  }
+  .textalign{
+    text-align: center;
+  }
