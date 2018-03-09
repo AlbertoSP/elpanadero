@@ -7,10 +7,10 @@ import { PedidoService } from '../services/pedidos.service';
   styleUrls: ['mapa.component.css'],
 })
 export class MapaComponent {
-  title: string = 'repaaartee panadeeeroo';
+  title: string = 'Order positions';
   name: string
-  latitud: number = 51.678418;
-  longitud: number = 7.809007;
+  latitud: string ;
+  longitud: string ;
   pedidos: any;
   constructor(public pedido: PedidoService) { 
     

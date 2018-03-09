@@ -22,7 +22,7 @@ export class MyNuevoPedidoComponent implements OnInit {
     // console.log(this.name, this.price);
     this.instanciadepedido.nuevoPedido(this.name, this.price, this.latitud, this.longitud).subscribe(data => {
       console.log(data);
-      this.router.navigate(["/list"]);
+      this.router.navigate(["/mapa"]);
     }, err => (this.error = err));
   }
 }

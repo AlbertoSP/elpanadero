@@ -9,24 +9,27 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="#">Panify</a>
       </div>
   
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="active">
-            <a [routerLink]="['/signup']"> signup or login<span class="sr-only">(current)</span></a>
+            <a [routerLink]="['/signup']"> Signup or login<span class="sr-only">(current)</span></a>
           </li>
           <li class="active">
-              <a [routerLink]="['/list']"> Productos<span class="sr-only">(current)</span></a>
+              <a [routerLink]="['/list']"> Products list<span class="sr-only">(current)</span></a>
             </li>
             <li class="active">
-                <a [routerLink]="['/newproduct']"> Nuevo producto<span class="sr-only">(current)</span></a>
+                <a [routerLink]="['/newproduct']"> New product<span class="sr-only">(current)</span></a>
               </li>
               <li class="active">
-                  <a [routerLink]="['/nuevopedido']"> Nuevo pedido<span class="sr-only">(current)</span></a>
+                  <a [routerLink]="['/nuevopedido']"> New order<span class="sr-only">(current)</span></a>
                 </li>
+                <li class="active">
+                    <a [routerLink]="['/mapa']"> Map<span class="sr-only">(current)</span></a>
+                  </li>
         </ul>
   
   
@@ -35,44 +38,22 @@
     </div>
     <!-- /.container-fluid -->
   </nav>
-  
-<form class="form-horizontal">
-    <div class="form-group">
-      <label for="inputEmail3" class="col-sm-2 control-label">Nombre</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="inputEmail3" placeholder="Añade un nombre"[(ngModel)]="latitud" name="latitud">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="inputPassword3" class="col-sm-2 control-label">Precio</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="inputPassword3" placeholder="Añade un precio"[(ngModel)]="longitud" name="longitud">
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
-        <button  class="colorBottonañadirproduct"type="submit" class="btn btn-default" (click)="submitForm()">Añadir</button>
-      </div>
-    </div>
-  </form>
-<!-- <div>
+<div>
   <form>
-    <h2> Añadir pedido</h2>
-    <label> name </label>
+    <h2> Add New Order</h2>
+    <!-- <label> name </label>
     <input type="text" [(ngModel)]="name" name="name"/>
     <br>
     <label> price </label>
-    <input type="text" [(ngModel)]="price" name="price"/>
-    <label> latitud </label>
+    <input type="text" [(ngModel)]="price" name="price"/> -->
+    <label> latitude </label>
     <input type="text" [(ngModel)]="latitud" name="latitud"/>
-    <label> longitud </label>
+    <br>
+    <label> longitude </label>
     <input type="text" [(ngModel)]="longitud" name="longitud"/>
     <div>
-      <button (click)="submitForm()">añadir nuevo producto</button>
+        <button  class="colorBottonañadirproduct"type="submit" class="btn btn-default" (click)="submitForm()">Add</button>
+      
     </div>
   </form>
-  </div> -->
+  </div>

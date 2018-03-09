@@ -9,24 +9,27 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="#">Panify</a>
       </div>
   
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="active">
-            <a [routerLink]="['/signup']"> signup or login<span class="sr-only">(current)</span></a>
+            <a [routerLink]="['/signup']"> Signup or login<span class="sr-only">(current)</span></a>
           </li>
           <li class="active">
-              <a [routerLink]="['/list']"> Productos<span class="sr-only">(current)</span></a>
+              <a [routerLink]="['/list']"> Products list<span class="sr-only">(current)</span></a>
             </li>
             <li class="active">
-                <a [routerLink]="['/newproduct']"> Nuevo producto<span class="sr-only">(current)</span></a>
+                <a [routerLink]="['/newproduct']"> New product<span class="sr-only">(current)</span></a>
               </li>
               <li class="active">
-                  <a [routerLink]="['/nuevopedido']"> Nuevo pedido<span class="sr-only">(current)</span></a>
+                  <a [routerLink]="['/nuevopedido']"> New order<span class="sr-only">(current)</span></a>
                 </li>
+                <li class="active">
+                    <a [routerLink]="['/mapa']"> Map<span class="sr-only">(current)</span></a>
+                  </li>
         </ul>
   
   
@@ -35,9 +38,12 @@
     </div>
     <!-- /.container-fluid -->
   </nav>
-<div>
-  <div *ngFor="let product of products">
-    <h3 class="textalign"> {{ product.name }} </h3>
-    <p class="textalign"> {{ product.price }} </p>
-  </div>
-</div>
+<div>  
+      <div *ngFor="let product of products"class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{ product.name }}</h3>
+        </div>
+        <div class="panel-body">
+            {{ product.price }}
+        </div>
+      </div>

@@ -9,24 +9,27 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="#">Panify</a>
       </div>
   
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="active">
-            <a [routerLink]="['/signup']"> signup or login<span class="sr-only">(current)</span></a>
+            <a [routerLink]="['/signup']"> Signup or login<span class="sr-only">(current)</span></a>
           </li>
           <li class="active">
-              <a [routerLink]="['/list']"> Productos<span class="sr-only">(current)</span></a>
+              <a [routerLink]="['/list']"> Products list<span class="sr-only">(current)</span></a>
             </li>
             <li class="active">
-                <a [routerLink]="['/newproduct']"> Nuevo producto<span class="sr-only">(current)</span></a>
+                <a [routerLink]="['/newproduct']"> New product<span class="sr-only">(current)</span></a>
               </li>
               <li class="active">
-                  <a [routerLink]="['/nuevopedido']"> Nuevo pedido<span class="sr-only">(current)</span></a>
+                  <a [routerLink]="['/nuevopedido']"> New order<span class="sr-only">(current)</span></a>
                 </li>
+                <li class="active">
+                    <a [routerLink]="['/mapa']"> Map<span class="sr-only">(current)</span></a>
+                  </li>
         </ul>
   
   
@@ -37,15 +40,15 @@
   </nav>
   <form class="form-horizontal">
       <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Nombre</label>
+        <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="inputEmail3" placeholder="Añade un nombre"[(ngModel)]="name" name="name">
+          <input type="text" class="form-control" id="inputEmail3" placeholder="name"[(ngModel)]="name" name="name">
         </div>
       </div>
       <div class="form-group">
-        <label for="inputPassword3" class="col-sm-2 control-label">Precio</label>
+        <label for="inputPassword3" class="col-sm-2 control-label">Price</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="inputPassword3" placeholder="Añade un precio"[(ngModel)]="price" name="price">
+          <input type="text" class="form-control" id="inputPassword3" placeholder="price"[(ngModel)]="price" name="price">
         </div>
       </div>
       <div class="form-group">
@@ -54,7 +57,7 @@
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <button  class="colorBottonañadirproduct"type="submit" class="btn btn-default" (click)="submitForm()">Añadir</button>
+          <button  class="colorBottonañadirproduct"type="submit" class="btn btn-default" (click)="submitForm()">Add</button>
         </div>
       </div>
     </form>

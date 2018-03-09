@@ -11,24 +11,27 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="#">Panify</a>
       </div>
   
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="active">
-            <a [routerLink]="['/signup']"> signup or login<span class="sr-only">(current)</span></a>
+            <a [routerLink]="['/signup']"> Signup or login<span class="sr-only">(current)</span></a>
           </li>
           <li class="active">
-              <a [routerLink]="['/list']"> Productos<span class="sr-only">(current)</span></a>
+              <a [routerLink]="['/list']"> Products list<span class="sr-only">(current)</span></a>
             </li>
             <li class="active">
-                <a [routerLink]="['/newproduct']"> Nuevo producto<span class="sr-only">(current)</span></a>
+                <a [routerLink]="['/newproduct']"> New product<span class="sr-only">(current)</span></a>
               </li>
               <li class="active">
-                  <a [routerLink]="['/nuevopedido']"> Nuevo pedido<span class="sr-only">(current)</span></a>
+                  <a [routerLink]="['/nuevopedido']"> New order<span class="sr-only">(current)</span></a>
                 </li>
+                <li class="active">
+                    <a [routerLink]="['/mapa']"> Map<span class="sr-only">(current)</span></a>
+                  </li>
         </ul>
   
   
@@ -37,8 +40,50 @@
     </div>
     <!-- /.container-fluid -->
   </nav>
+  
+  
+  <div *ngIf="!session.getUser()">
+  <form class="form-horizontal">
+      <h2 class="textalign"> Login or Signup </h2>
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputEmail3" placeholder="name"[(ngModel)]="username" name="username">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPassword3" placeholder="password"[(ngModel)]="password" name="password">
+        </div>
+      </div>
+      <!-- <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+        </div>
+      </div> -->
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button  class="colorBottonañadirproduct"type="submit" class="btn btn-default" (click)="login()">login</button>
+          <button  class="colorBottonañadirproduct"type="submit" class="btn btn-default" (click)="signup()">signup</button>
+        </div>
+        
+      </div>
+    </form>
+    <p *ngIf="error" class="error"> {{ error }} </p>
+</div>
+<div *ngIf="session.getUser()">
+    <pre> {{ session.getUser() | json }} </pre>
+    <button  class="colorBottonañadirproduct"type="submit" class="btn btn-default" (click)="logout()">Logout</button>
+  
+  </div>
 
-<div *ngIf="!session.getUser()">
+
+
+
+
+
+
+<!-- <div *ngIf="!session.getUser()">
   <form>
     <h2> Login or Signup </h2>
     <label> Username </label>
@@ -57,4 +102,4 @@
 <div *ngIf="session.getUser()">
   <pre> {{ session.getUser() | json }} </pre>
   <button (click)="logout()"> Logout </button>
-</div>
+</div> -->
