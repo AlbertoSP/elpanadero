@@ -1,46 +1,98 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>panify</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+<body id="page-top" class="index">
+
+  <!-- Navigation -->
+  <nav id="mainNav" class="navbar   navbar-default navbar-custom navbar-fixed-top">
+    <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-          aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span> Menu
+          <i class="fa fa-bars"></i>
         </button>
-        <a class="navbar-brand" href="#">Panify</a>
+        <a class="navbar-brand page-scroll" href="#page-top">Panify</a>
       </div>
-  
-      <!-- Collect the nav links, forms, and other content for toggling -->
+
+      
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav navbar-right">
           <li class="active">
             <a [routerLink]="['/signup']"> Signup or login<span class="sr-only">(current)</span></a>
           </li>
-         
+          
         </ul>
   
   
       </div>
-      <main role="main" class="inner cover">
-          <h1 class="cover-heading">Te llevamos el pan hasta la puerta :)</h1>
-          
-          <p class="lead">
-            <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
-          </p>
-        </main>
       <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
   </nav>
 
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in welcomecolor">Welcome To Panify!</div>
+        <div class="intro-heading">Bread at home whenever you want</div>
+        <a href="#services" class="page-scroll btn btn-xl">Signup or login</a>
+      </div>
+    </div>
+  </header>
 
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Steps</h2>
+          <h3 class="section-subheading text-muted">Follow these simple steps.</h3>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Signup or login</h4>
+          <p class="text-muted">Register or enter your account to make a new order.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Make a new order</h4>
+          <p class="text-muted">Select a product and ask for it instantly!.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Receive the order</h4>
+          <p class="text-muted">Decide where your new order will be delivered! That easy :).</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+</body>
 
-
-
-
+</html>
 
 
 

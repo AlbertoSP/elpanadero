@@ -6,8 +6,8 @@ import {MyNewProductComponent} from './newproduct/newproduct.component'
 import {MyNuevoPedidoComponent} from './pedido/pedido.component'
 import {MapaComponent} from './mapa/mapa.component'
 export const routes: Routes = [
-    { path: '', redirectTo: 'signup', pathMatch: 'full' },
-    // { path: 'home',  component: MyHomeComponent },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'home',  component: MyHomeComponent },
     { path: 'list',  component: ProductListComponent },
     { path: 'signup',  component:  LoginFormComponent}, 
     { path: 'newproduct',  component:  MyNewProductComponent},  
